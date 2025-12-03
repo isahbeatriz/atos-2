@@ -33,7 +33,7 @@ html, body {
   left: 0;
   right: 0;
   height: 5cm;
-  background: url("../logoo.jpg") center center no-repeat;
+  background: url("logoo.jpg") center center no-repeat;
   background-size: contain;
   background-color: #531401; /* mesma cor da logo */
   display: flex;
@@ -431,3 +431,4 @@ section { will-change: transform, opacity; }
   .logo img { height: calc(5cm - 1.8cm); }
   .logo h1 { display: none; } /* mostrar só o símbolo para economizar espaço */
 }
+
