@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atos 2 - Igreja</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra superior com logo -->
+  <header class="topbar">
+    <div class="logo">
+      <img src="../logoo.jpg" alt="Logo Atos 2" />
+     
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Início</a>
+      <a href="historia.html">História</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="ministerios.html">Ministérios</a>
+    </nav>
+  </header>
+
+  <!-- Fundo com overlay semitransparente (não cobre a topbar) -->
+  <div class="background">
+    <div class="overlay"></div>
+  </div>
+
+  <main>
+    <!-- Hero / Chamada principal -->
+    <section class="hero animate-fade-up">
+      <div class="hero-content">
+        <h2>Bem-vindos à Igreja Atos 2</h2>
+        <p>Uma comunidade dedicada à oração, ensino, comunhão e serviço. Aqui você encontra propósito, família e fé viva.</p>
+        <a href="eventos.html" class="btn btn-primary">Veja próximos encontros</a>
+      </div>
+    </section>
+
+    <!-- Sobre a igreja (espaço para informações) -->
+    <section class="card-section animate-fade-up">
+      <h3>Sobre a Igreja</h3>
+      <p>
+        Escreva aqui a missão, visão e valores. Adicione testemunhos, iniciativas sociais,
+        horários de cultos e contatos. Este bloco é totalmente editável.
+      </p>
+      <div class="grid-2">
+        <div class="card">
+          <h4>Missão</h4>
+          <p>Alcançar vidas com o evangelho, discipular e servir com amor.</p>
+        </div>
+        <div class="card">
+          <h4>Visão</h4>
+          <p>Ser uma igreja que vive Atos 2: unidade, ensino, partir do pão e orações.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Espaço para vídeos -->
+    <section class="media-section animate-fade-up">
+      <h3>Vídeos</h3>
+      <p>Adicione vídeos de cultos, mensagens e eventos especiais.</p>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="video-wrapper">
+            <!-- Exemplo de vídeo YouTube -->
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Mensagem da Semana"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h4>Mensagem da Semana</h4>
+        </div>
+        <div class="media-card">
+          <div class="video-wrapper">
+            <video controls poster="assets/poster-video.jpg">
+              <source src="assets/video-exemplo.mp4" type="video/mp4" />
+              Seu navegador não suporta o vídeo.
+            </video>
+          </div>
+          <h4>Culto de Domingo</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Espaço para fotos -->
+    <section class="gallery-section animate-fade-up">
+      <h3>Galeria de Fotos</h3>
+      <p>Adicione fotos de batismos, retiros, ações sociais e momentos da comunidade.</p>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="assets/foto1.jpg" alt="Comunhão" />
+          <figcaption>Comunhão</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/foto2.jpg" alt="Louvor" />
+          <figcaption>Louvor</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/foto3.jpg" alt="Ação Social" />
+          <figcaption>Ação Social</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/foto4.jpg" alt="Batismos" />
+          <figcaption>Batismos</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Igreja Atos 2 — Todos os direitos reservados.</p>
+      <p>Endereço: Rua Exemplo, 123 - Arapongas, PR | Contato: (43) 0000-0000</p>
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza ano automaticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

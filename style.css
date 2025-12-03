@@ -1,0 +1,433 @@
+/* Tipografia base */
+:root {
+  --red-900: #7a0b0b;
+  --red-800: #9b1111;
+  --red-700: #b81616;
+  --red-600: #d21b1b;
+  --red-500: #e32626;
+  --red-400: #f04a4a;
+  --rose-100: #fde9e9;
+  --dark-900: #1a1a1a;
+  --dark-800: #222;
+  --light: #ffffff;
+  --muted: #f7f7f7;
+  --shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--light);
+  background-color: var(--dark-900);
+}
+
+/* Topbar com logo centralizada e fundo da cor da logo */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5cm;
+  background: url("../logoo.jpg") center center no-repeat;
+  background-size: contain;
+  background-color: #531401; /* mesma cor da logo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Esconde o logo como imagem separada, já que está como fundo */
+.logo {
+  display: none;
+}
+
+/* Navegação por cima da logo */
+.nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.3); /* leve contraste sobre a logo */
+  transition: background-color 250ms ease, transform 250ms ease;
+}
+
+.nav a:hover {
+  background-color: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.nav a.active {
+  background-color: rgba(255,255,255,0.4);
+}
+
+/* Navegação */
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  transition: background-color 250ms ease, transform 250ms ease;
+}
+
+.nav a:hover {
+  background-color: rgba(115, 40, 40, 0.12);
+  transform: translateY(-2px);
+}
+
+.nav a.active {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* Fundo com overlay, não cobre a topbar */
+.background {
+  position: fixed;
+  top: 5cm;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../todomundo.jpg") center center / cover no-repeat fixed;
+  z-index: -2;
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(122, 11, 11, 0.55); /* vermelho escuro semitransparente */
+  backdrop-filter: blur(1px);
+  z-index: -1;
+}
+
+/* Layout principal */
+main {
+  padding-top: calc(5cm + 2rem); /* para não ficar atrás da topbar */
+  padding-bottom: 4rem;
+}
+
+section {
+  width: min(1200px, 92vw);
+  margin: 0 auto 2.5rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  padding: 2rem;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(227,38,38,0.25), rgba(0,0,0,0.2));
+}
+
+.hero-content h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin: 0 0 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #ffecec;
+  margin: 0 0 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.btn-primary {
+  background: var(--red-500);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(227,38,38,0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--red-600);
+}
+
+.btn-outline {
+  border: 2px solid var(--red-400);
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: var(--red-400);
+}
+
+/* Cards */
+.card-section h3,
+.media-section h3,
+.gallery-section h3,
+.page-header h2 {
+  margin-top: 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+/* Mídia */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.media-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.6));
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Página: Timeline (História) */
+.timeline {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--red-700), var(--red-400));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 1rem 0 1.5rem 2rem;
+  padding: 1rem 1rem 1rem 2rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -12px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  background: var(--red-500);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(227,38,38,0.6);
+}
+
+/* Página: Eventos */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, var(--red-500), var(--red-700));
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.6rem 0.4rem;
+}
+
+.event-date .day {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.event-date .month {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Página: Ministérios */
+.ministries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ministry-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.ministry-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+  padding: 1.5rem 2rem;
+}
+
+.footer-content {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  color: #ffecec;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Animações */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 700ms ease both;
+}
+
+/* Scroll suave para pequenas aparições */
+section { will-change: transform, opacity; }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .media-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .events-grid { grid-template-columns: 1fr 1fr; }
+  .ministries-grid { grid-template-columns: 1fr 1fr; }
+  .logo h1 { font-size: 1.4rem; }
+}
+
+@media (max-width: 640px) {
+  .nav a { padding: 0.45rem 0.7rem; }
+  .events-grid { grid-template-columns: 1fr; }
+  .ministries-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .logo img { height: calc(5cm - 1.8cm); }
+  .logo h1 { display: none; } /* mostrar só o símbolo para economizar espaço */
+}

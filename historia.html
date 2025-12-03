@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>História - Atos 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <img src="assets/logo-atos2.png" alt="Logo Atos 2" />
+      <h1>Igreja Atos 2</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="historia.html" class="active">História</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="ministerios.html">Ministérios</a>
+    </nav>
+  </header>
+
+  <div class="background">
+    <div class="overlay"></div>
+  </div>
+
+  <main>
+    <section class="page-header animate-fade-up">
+      <h2>Nossa História</h2>
+      <p>Como tudo começou e para onde estamos indo.</p>
+    </section>
+
+    <section class="timeline animate-fade-up">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Fundação</h4>
+          <p>Relate o início da igreja: motivações, pessoas envolvidas e o chamado.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Crescimento</h4>
+          <p>Compartilhe marcos importantes, ampliação de ministérios, conquistas e desafios.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Hoje</h4>
+          <p>Explique como vivemos Atos 2 no presente e a visão para o futuro.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-section animate-fade-up">
+      <h3>Vídeos históricos</h3>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Documentário Atos 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h4>Documentário Atos 2</h4>
+        </div>
+        <div class="media-card">
+          <div class="video-wrapper">
+            <video controls poster="assets/poster-historia.jpg">
+              <source src="assets/historia.mp4" type="video/mp4" />
+              Seu navegador não suporta o vídeo.
+            </video>
+          </div>
+          <h4>Depoimentos</h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section animate-fade-up">
+      <h3>Fotos antigas</h3>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="assets/historia1.jpg" alt="Primeiros cultos" />
+          <figcaption>Primeiros cultos</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/historia2.jpg" alt="Primeiro templo" />
+          <figcaption>Primeiro templo</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/historia3.jpg" alt="Eventos marcantes" />
+          <figcaption>Eventos marcantes</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Igreja Atos 2 — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

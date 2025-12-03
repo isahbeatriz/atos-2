@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ministérios - Atos 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <img src="assets/logo-atos2.png" alt="Logo Atos 2" />
+      <h1>Igreja Atos 2</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="historia.html">História</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="ministerios.html" class="active">Ministérios</a>
+    </nav>
+  </header>
+
+  <div class="background">
+    <div class="overlay"></div>
+  </div>
+
+  <main>
+    <section class="page-header animate-fade-up">
+      <h2>Ministérios</h2>
+      <p>Servindo com propósito em todas as áreas.</p>
+    </section>
+
+    <!-- Grid de ministérios -->
+    <section class="ministries-grid animate-fade-up">
+      <article class="ministry-card">
+        <div class="ministry-icon">🎶</div>
+        <h4>Louvor</h4>
+        <p>Conduz a igreja em adoração com excelência e coração.</p>
+        <a href="#" class="btn btn-outline">Participar</a>
+      </article>
+      <article class="ministry-card">
+        <div class="ministry-icon">🧒</div>
+        <h4>Infantil</h4>
+        <p>Ensino bíblico criativo e seguro para crianças.</p>
+        <a href="#" class="btn btn-outline">Saiba mais</a>
+      </article>
+      <article class="ministry-card">
+        <div class="ministry-icon">🧑‍🎓</div>
+        <h4>Discipulado</h4>
+        <p>Formação espiritual e acompanhamento de novos membros.</p>
+        <a href="#" class="btn btn-outline">Inscrições</a>
+      </article>
+      <article class="ministry-card">
+        <div class="ministry-icon">🤝</div>
+        <h4>Ação Social</h4>
+        <p>Serviço à comunidade com projetos contínuos.</p>
+        <a href="#" class="btn btn-outline">Doar</a>
+      </article>
+    </section>
+
+    <!-- Espaço para vídeos dos ministérios -->
+    <section class="media-section animate-fade-up">
+      <h3>Vídeos dos ministérios</h3>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Ministério de Louvor"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h4>Ministério de Louvor</h4>
+        </div>
+        <div class="media-card">
+          <div class="video-wrapper">
+            <video controls poster="assets/min-poster.jpg">
+              <source src="assets/ministerios.mp4" type="video/mp4" />
+              Seu navegador não suporta o vídeo.
+            </video>
+          </div>
+          <h4>Ministério Infantil</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Espaço para fotos dos ministérios -->
+    <section class="gallery-section animate-fade-up">
+      <h3>Fotos dos ministérios</h3>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="assets/min1.jpg" alt="Louvor" />
+          <figcaption>Louvor</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/min2.jpg" alt="Infantil" />
+          <figcaption>Infantil</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/min3.jpg" alt="Discipulado" />
+          <figcaption>Discipulado</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/min4.jpg" alt="Ação Social" />
+          <figcaption>Ação Social</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Igreja Atos 2 — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eventos - Atos 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <img src="assets/logo-atos2.png" alt="Logo Atos 2" />
+      <h1>Igreja Atos 2</h1>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="historia.html">História</a>
+      <a href="eventos.html" class="active">Eventos</a>
+      <a href="ministerios.html">Ministérios</a>
+    </nav>
+  </header>
+
+  <div class="background">
+    <div class="overlay"></div>
+  </div>
+
+  <main>
+    <section class="page-header animate-fade-up">
+      <h2>Próximos eventos</h2>
+      <p>Participe, convide e compartilhe!</p>
+    </section>
+
+    <!-- Cards de eventos -->
+    <section class="events-grid animate-fade-up">
+      <article class="event-card">
+        <div class="event-date">
+          <span class="day">12</span>
+          <span class="month">DEZ</span>
+        </div>
+        <div class="event-info">
+          <h4>Conferência de Avivamento</h4>
+          <p>Louvor, palavra e intercessão. Inscrições abertas.</p>
+          <a href="#" class="btn btn-outline">Saiba mais</a>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-date">
+          <span class="day">20</span>
+          <span class="month">JAN</span>
+        </div>
+        <div class="event-info">
+          <h4>Retiro de Jovens</h4>
+          <p>Três dias de comunhão, ensino e propósito.</p>
+          <a href="#" class="btn btn-outline">Detalhes</a>
+        </div>
+      </article>
+
+      <article class="event-card">
+        <div class="event-date">
+          <span class="day">05</span>
+          <span class="month">MAR</span>
+        </div>
+        <div class="event-info">
+          <h4>Encontro de Casais</h4>
+          <p>Fortalecendo alianças e famílias.</p>
+          <a href="#" class="btn btn-outline">Inscreva-se</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Espaço para vídeos de eventos -->
+    <section class="media-section animate-fade-up">
+      <h3>Vídeos de eventos</h3>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="video-wrapper">
+            <iframe
+              src="../atos 2"
+              title="Highlights Conferência"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h4>Highlights Conferência</h4>
+        </div>
+        <div class="media-card">
+          <div class="video-wrapper">
+            <video controls poster="assets/evento-poster.jpg">
+              <source src="assets/eventos.mp4" type="video/mp4" />
+              Seu navegador não suporta o vídeo.
+            </video>
+          </div>
+          <h4>Retiro de Jovens</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Espaço para fotos de eventos -->
+    <section class="gallery-section animate-fade-up">
+      <h3>Fotos de eventos</h3>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="assets/evento1.jpg" alt="Louvor" />
+          <figcaption>Louvor</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/evento2.jpg" alt="Culto especial" />
+          <figcaption>Culto especial</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/evento3.jpg" alt="Intercessão" />
+          <figcaption>Intercessão</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/evento4.jpg" alt="Comunhão" />
+          <figcaption>Comunhão</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Igreja Atos 2 — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
