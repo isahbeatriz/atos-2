@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Barra superior com logo -->
+  <!-- Barra superior com logo e menu -->
   <header class="topbar">
     <div class="logo">
-      <img src="logoo.jpg" alt="Logo Atos 2" />
-     
+      <img src="assets/logo-atos2.png" alt="Logo Atos 2" class="logo-desktop" />
+      <img src="assets/logo-mobile.png" alt="Logo Atos 2 Mobile" class="logo-mobile" />
     </div>
+
+    <!-- Botões de menu -->
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <button class="menu-close" aria-label="Fechar menu">✖</button>
+
     <nav class="nav">
       <a href="index.html" class="active">Início</a>
       <a href="historia.html">História</a>
@@ -21,13 +26,12 @@
     </nav>
   </header>
 
-  <!-- Fundo com overlay semitransparente (não cobre a topbar) -->
+  <!-- Fundo com overlay -->
   <div class="background">
     <div class="overlay"></div>
   </div>
 
   <main>
-    <!-- Hero / Chamada principal -->
     <section class="hero animate-fade-up">
       <div class="hero-content">
         <h2>Bem-vindos à Igreja Atos 2</h2>
@@ -36,13 +40,9 @@
       </div>
     </section>
 
-    <!-- Sobre a igreja (espaço para informações) -->
     <section class="card-section animate-fade-up">
       <h3>Sobre a Igreja</h3>
-      <p>
-        Escreva aqui a missão, visão e valores. Adicione testemunhos, iniciativas sociais,
-        horários de cultos e contatos. Este bloco é totalmente editável.
-      </p>
+      <p>Missão, visão e valores da igreja.</p>
       <div class="grid-2">
         <div class="card">
           <h4>Missão</h4>
@@ -55,57 +55,17 @@
       </div>
     </section>
 
-    <!-- Espaço para vídeos -->
     <section class="media-section animate-fade-up">
       <h3>Vídeos</h3>
-      <p>Adicione vídeos de cultos, mensagens e eventos especiais.</p>
       <div class="media-grid">
         <div class="media-card">
           <div class="video-wrapper">
-            <!-- Exemplo de vídeo YouTube -->
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID"
-              title="Mensagem da Semana"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <h4>Mensagem da Semana</h4>
-        </div>
-        <div class="media-card">
-          <div class="video-wrapper">
-            <video controls poster="assets/poster-video.jpg">
-              <source src="assets/video-exemplo.mp4" type="video/mp4" />
-              Seu navegador não suporta o vídeo.
+            <video controls poster="assets/poster.jpg">
+              <source src="assets/meu-video.mp4" type="video/mp4" />
             </video>
           </div>
           <h4>Culto de Domingo</h4>
         </div>
-      </div>
-    </section>
-
-    <!-- Espaço para fotos -->
-    <section class="gallery-section animate-fade-up">
-      <h3>Galeria de Fotos</h3>
-      <p>Adicione fotos de batismos, retiros, ações sociais e momentos da comunidade.</p>
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <img src="assets/foto1.jpg" alt="Comunhão" />
-          <figcaption>Comunhão</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/foto2.jpg" alt="Louvor" />
-          <figcaption>Louvor</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/foto3.jpg" alt="Ação Social" />
-          <figcaption>Ação Social</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="assets/foto4.jpg" alt="Batismos" />
-          <figcaption>Batismos</figcaption>
-        </figure>
       </div>
     </section>
   </main>
@@ -113,15 +73,29 @@
   <footer class="footer">
     <div class="footer-content">
       <p>&copy; <span id="year"></span> Igreja Atos 2 — Todos os direitos reservados.</p>
-      <p>Endereço: Rua Exemplo, 123 - Arapongas, PR | Contato: (43) 0000-0000</p>
     </div>
   </footer>
 
   <script>
-    // Atualiza ano automaticamente
+    // Atualiza ano
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu hambúrguer
+    const toggle = document.querySelector('.menu-toggle');
+    const closeBtn = document.querySelector('.menu-close');
+    const nav = document.querySelector('.nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.add('active');
+      toggle.style.display = 'none';
+      closeBtn.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      nav.classList.remove('active');
+      closeBtn.style.display = 'none';
+      toggle.style.display = 'block';
+    });
   </script>
 </body>
 </html>
-
-
